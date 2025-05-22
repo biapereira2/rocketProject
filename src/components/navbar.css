@@ -1,0 +1,33 @@
+.navbar {
+    background-color: #998d43;
+    @apply text-white flex items-center px-6 py-6;
+}
+
+.navbar-logo {
+    @apply font-bold text-xl;
+}
+
+.navbar-links {
+    @apply flex space-x-6 flex-1 justify-center;
+}
+
+.navbar-link {
+    @apply hover:text-gray-200 cursor-pointer;
+}
+
+.navbar-button {
+    position:relative;
+    @apply p-2 text-white hover:text-gray-200 transition;
+}
+
+.quantity-items {
+  @apply relative;
+}
+
+.icon {
+  @apply w-6 h-6 text-white;
+}
+
+.cart-badge {
+    @apply absolute -top-2 -right-2 bg-red-600 text-white text-xs w-5 h-5 rounded-full flex items-center justify-center;
+}

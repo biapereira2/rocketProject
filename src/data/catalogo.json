@@ -1,0 +1,58 @@
+[
+    {
+        "id": 1,
+        "name": "Conjunto trabalhado com zircônias",
+        "price": 199.99,
+        "description": "Anel de compromisso com diamantes.",
+        "image": "/images/conjunto1.png"
+    },
+    {
+        "id": 2,
+        "name": "Conjunto vazado de prata",
+        "price": 149.99,
+        "description": "Anel de noivado com design moderno.",
+        "image": "/images/conjunto8.png"
+    },
+    {
+        "id": 3,
+        "name": "Conjunto flor",
+        "price": 129.99,
+        "description": "Anel de noiva com design elegante.",
+        "image": "/images/conjunto3.png"
+    },
+    {
+        "id": 4,
+        "name": "Conjunto redondo com zircônias",
+        "price": 149.99,
+        "description": "Anel de compromisso com design clássico.",
+        "image": "/images/conjunto5.png"
+    },
+    {
+        "id": 5,
+        "name": "Conjunto laço",
+        "price": 129.99,
+        "description": "Anel de compromisso com design clássico.",
+        "image": "/images/conjunto9.png"
+    },
+    {
+        "id": 6,
+        "name": "Conjunto laço",
+        "price": 139.99,
+        "description": "Anel de compromisso com design clássico.",
+        "image": "/images/conjunto4.png"
+    },
+    {
+        "id": 7,
+        "name": "Conjunto quadrado com zircônias",
+        "price": 159.99,
+        "description": "Anel de compromisso com design clássico.",
+        "image": "/images/conjunto7.png"
+    },
+    {
+        "id": 8,
+        "name": "Conjunto vazado",
+        "price": 169.99,
+        "description": "Anel de compromisso com design clássico.",
+        "image": "/images/conjunto6.png"
+    }
+]
