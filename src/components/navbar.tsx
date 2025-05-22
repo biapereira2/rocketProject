@@ -17,7 +17,7 @@ export function Navbar({ onCarrinhoClick }: NavbarProps) {
         <div className="navbar-links">
             <Link to="/" className="navbar-link">Home</Link>
             <Link to="/conjuntos" className="navbar-link">Conjuntos</Link>
-            <Link to="/sobreNos" className="navbar-link">Sobre Nós</Link>
+            <Link to="/historicoPedidos" className="navbar-link">Meus pedidos</Link>
         </div>
 
             <button className="navbar-button" onClick={onCarrinhoClick}>

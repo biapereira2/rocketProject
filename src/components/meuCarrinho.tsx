@@ -14,16 +14,28 @@ export function MeuCarrinho({ aberto, onClose }: MeuCarrinhoProps) {
   const total = carrinho.reduce((acc, item) => acc + item.price * item.quantidade, 0);
 
     function finalizarCompra() {
-    if (carrinho.length === 0) return;
+        if (carrinho.length === 0) return;
 
-    limparCarrinho();
+        const novoPedido = {
+            id: Date.now().toString(),
+            data: new Date().toLocaleDateString(),
+            total: carrinho.reduce((acc, item) => acc + item.price * item.quantidade, 0),
+            itens: [...carrinho],
+        };
 
-    setMensagemSucesso('Compra finalizada com sucesso!');
+        const historicoExistente = JSON.parse(localStorage.getItem('historicoPedidos') || '[]');
 
-    setTimeout(() => {
-        setMensagemSucesso('');
-        onClose();
-    }, 3000);
+        const novoHistorico = [novoPedido, ...historicoExistente];
+        localStorage.setItem('historicoPedidos', JSON.stringify(novoHistorico));
+
+        limparCarrinho();
+
+        setMensagemSucesso('Compra finalizada com sucesso!');
+
+        setTimeout(() => {
+            setMensagemSucesso('');
+            onClose();
+        }, 3000);
     }
 
     return (
@@ -72,5 +84,5 @@ export function MeuCarrinho({ aberto, onClose }: MeuCarrinhoProps) {
         )}
         </div>
     </>
-  );
+    );
 }

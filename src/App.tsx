@@ -1,12 +1,13 @@
 import { Routes, Route } from 'react-router-dom';
 import { Home } from './pages/home';
 import { Conjuntos } from './pages/conjuntos';
-import { SobreNos } from './pages/sobreNos';
 import { Navbar } from './components/navbar';
 import { Detalhes } from './components/detalhes';
 import { MeuCarrinho } from './components/meuCarrinho';
+import { Footer } from './components/footer';
 import './index.css';
 import { useState } from 'react';
+import { HistoricoPedidos } from './components/historicoPedidos';
 
 function App() {
   const [carrinhoAberto, setCarrinhoAberto] = useState(false);
@@ -19,10 +20,11 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/conjuntos" element={<Conjuntos />} />
-          <Route path="/sobreNos" element={<SobreNos />} />
+          <Route path="/historicoPedidos" element={<HistoricoPedidos />} />
           <Route path="/produto/:id" element={<Detalhes />} />
         </Routes>
       </div>
+      <Footer />
     </>
   );
 }
