@@ -21,7 +21,7 @@ export function Detalhes() {
                 <div className="detalhes-info">
                     <h1>{produto.name}</h1>
                     <p>{produto.description}</p>
-                    <span className="detalhes-preco">{produto.price}</span>
+                    <span className="detalhes-preco">R$ {produto.price}</span>
 
                     <div className="botao">
                         {quantidade === 0 ? (

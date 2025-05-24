@@ -26,7 +26,6 @@ export function HistoricoPedidos() {
 
     return (
         <div className="historico-container">
-        <h2 className="historico-titulo">Histórico de Pedidos</h2>
 
         {pedidos.length === 0 ? (
             <p className="historico-vazio">Você ainda não fez nenhum pedido.</p>

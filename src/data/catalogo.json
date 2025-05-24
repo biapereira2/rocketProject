@@ -1,58 +1,114 @@
 [
     {
         "id": 1,
-        "name": "Conjunto trabalhado com zircônias",
+        "name": "Conjunto nó",
         "price": 199.99,
-        "description": "Anel de compromisso com diamantes.",
+        "description": "Conjunto elegante com acabamento em pedras. O colar tem 50cm de comprimento. A garantia tem prazo de 12 meses.",
         "image": "/images/conjunto1.png"
     },
     {
         "id": 2,
-        "name": "Conjunto vazado de prata",
+        "name": "Conjunto laço cravejado",
         "price": 149.99,
-        "description": "Anel de noivado com design moderno.",
-        "image": "/images/conjunto8.png"
+        "description": "Conjunto moderno com acabamento detalhado. O colar tem 45cm de comprimento. A garantia tem prazo de 12 meses.",
+        "image": "/images/conjunto2.png"
     },
     {
         "id": 3,
-        "name": "Conjunto flor",
-        "price": 129.99,
-        "description": "Anel de noiva com design elegante.",
+        "name": "Conjunto trevo com zircônias",
+        "price": 169.99,
+        "description": " Uma versão clássica e romântica do conjunto trevo. O colar tem 45cm de comprimento. A garantia tem prazo de 12 meses.",
         "image": "/images/conjunto3.png"
     },
     {
         "id": 4,
-        "name": "Conjunto redondo com zircônias",
+        "name": "Conjunto coração",
         "price": 149.99,
-        "description": "Anel de compromisso com design clássico.",
-        "image": "/images/conjunto5.png"
-    },
-    {
-        "id": 5,
-        "name": "Conjunto trabalhado",
-        "price": 129.99,
-        "description": "Anel de compromisso com design clássico.",
-        "image": "/images/conjunto9.png"
-    },
-    {
-        "id": 6,
-        "name": "Conjunto laço",
-        "price": 139.99,
-        "description": "Anel de compromisso com design clássico.",
+        "description": "Conjunto simples e elegante. O colar tem 40cm de comprimento. A garantia tem prazo de 12 meses.",
         "image": "/images/conjunto4.png"
     },
     {
+        "id": 5,
+        "name": "Conjunto trevo cravejado",
+        "price": 129.99,
+        "description": "Conjunto em formato de trevo com pedras. O colar tem 45cm de comprimento. A garantia tem prazo de 12 meses.",
+        "image": "/images/conjunto5.png"
+    },
+    {
+        "id": 6,
+        "name": "Conjunto oval",
+        "price": 139.99,
+        "description": "Semijoia com acabamento semelhante ao de alta joalheria. O colar tem 45cm de comprimento. A garantia tem prazo de 12 meses.",
+        "image": "/images/conjunto6.png"
+    },
+    {
         "id": 7,
-        "name": "Conjunto quadrado com zircônias",
+        "name": "Conjunto gotas",
         "price": 159.99,
-        "description": "Anel de compromisso com design clássico.",
+        "description": "Conjunto minimalista com formas orgânicas. O colar tem 40cm de comprimento. A garantia tem prazo de 12 meses.",
         "image": "/images/conjunto7.png"
     },
     {
         "id": 8,
-        "name": "Conjunto vazado",
+        "name": "Conjunto coração vazado",
         "price": 169.99,
-        "description": "Anel de compromisso com design clássico.",
-        "image": "/images/conjunto6.png"
+        "description": "Conjunto em formato de coração com bordas cravejadas. O colar tem 50cm de comprimento. A garantia tem prazo de 12 meses.",
+        "image": "/images/conjunto8.png"
+    },
+    {
+        "id": 9,
+        "name": "Conjunto laço com peróla",
+        "price": 179.99,
+        "description": "Conjunto clássico com design delicado. O colar tem 35cm de comprimento. A garantia tem prazo de 12 meses.",
+        "image": "/images/conjunto9.png"
+    },
+    {
+        "id": 10,
+        "name": "Conjunto quadrado",
+        "price": 189.99,
+        "description": "Conjunto quadrado minimalista. O colar tem 50cm de comprimento. A garantia tem prazo de 12 meses.",
+        "image": "/images/conjunto10.png"
+    },
+    {
+        "id": 11,
+        "name": "Conjunto trabalhado",
+        "price": 199.99,
+        "description": "Conjunto detalhado e elegante. O colar tem 35cm de comprimento. A garantia tem prazo de 12 meses.",
+        "image": "/images/conjunto11.png"
+    },
+    {
+        "id": 12,
+        "name": "Conjunto torção",
+        "price": 209.99,
+        "description": "Conjunto torcido com zircônias. O colar tem 50cm de comprimento. A garantia tem prazo de 12 meses.",
+        "image": "/images/conjunto12.png"
+    },
+    {
+        "id": 13,
+        "name": "Conjunto folhas",
+        "price": 219.99,
+        "description": "Conjunto folhas com detalhes em pedras. O colar tem 50cm de comprimento. A garantia tem prazo de 12 meses.",
+        "image": "/images/conjunto13.png"
+    },
+    {
+        "id": 14,
+        "name": "Conjunto flor",
+        "price": 229.99,
+        "description": "Conjunto flor com detalhes em pedras. O colar tem 35cm de comprimento. A garantia tem prazo de 12 meses.",
+        "image": "/images/conjunto14.png"
+    },
+    {
+        "id": 15,
+        "name": "Conjunto orgânico",
+        "price": 239.99,
+        "description": "Conjunto com formas orgânicas minimalista. O colar tem 40cm de comprimento. A garantia tem prazo de 12 meses.",
+        "image": "/images/conjunto15.png"
+    },
+    {
+        "id": 16,
+        "name": "Conjunto quadrado com pedras",
+        "price": 249.99,
+        "description": "Conjunto com pedras em formato de quadrado. O colar tem 50cm de comprimento. A garantia tem prazo de 12 meses.",
+        "image": "/images/conjunto16.png"
     }
 ]
