@@ -1,5 +1,5 @@
 .navbar {
-    background-color: #998d43;
+    background-color: #a7987e;
     @apply text-white flex items-center px-6 py-6;
 }
 
@@ -12,12 +12,20 @@
 }
 
 .navbar-link {
-    @apply hover:text-gray-200 cursor-pointer;
+    @apply p-2 text-white transition transform hover:-translate-y-1 hover:text-gray-200;
+}
+
+.navbar-icons {
+    @apply flex items-center space-x-6;
+}
+
+.navbar-icon-link {
+    @apply text-white hover:text-gray-200 cursor-pointer flex items-center;
 }
 
 .navbar-button {
-    position:relative;
-    @apply p-2 text-white hover:text-gray-200 transition;
+    position: relative;
+    @apply p-2 text-white transition transform hover:-translate-y-1 hover:text-gray-200;
 }
 
 .quantity-items {
@@ -25,7 +33,7 @@
 }
 
 .icon {
-  @apply w-6 h-6 text-white;
+    @apply w-6 h-6 text-white;
 }
 
 .cart-badge {

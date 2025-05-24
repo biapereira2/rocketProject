@@ -1,5 +1,6 @@
 .footer {
-    @apply bg-gray-900 text-white py-8 mt-16;
+    background-color: #a7987e;
+    @apply text-white py-8 mt-16;
 }
 
 .footer-container {
