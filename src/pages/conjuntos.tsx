@@ -3,24 +3,25 @@ import './conjuntos.css';
 import { useNavigate, useLocation } from 'react-router-dom';
 import { useCarrinho } from "../context/carrinho.tsx";
 
+// (No props needed for Conjuntos)
 export function Conjuntos() {
     const { adicionarProduto, removerProduto, quantidadeProduto } = useCarrinho();
     const navigate = useNavigate();
     const location = useLocation();
 
     const params = new URLSearchParams(location.search);
-    const filtro = params.get('busca') || '';
+    const busca = params.get('busca') || '';
 
     const produtosFiltrados = catalogo.filter(produto => 
-        produto.name.toLowerCase().includes(filtro.toLowerCase()) ||
-        produto.description.toLowerCase().includes(filtro.toLowerCase())
+        produto.name.toLowerCase().includes(busca.toLowerCase()) ||
+        produto.description.toLowerCase().includes(busca.toLowerCase())
     );
 
     return (
         <div>
             <div className="catalogo">
                 {produtosFiltrados.length === 0 ? (
-                    <p>Nenhum produto encontrado para "{filtro}"</p>
+                    <p>Nenhum produto encontrado para "{busca}"</p>
                 ) : (
                     produtosFiltrados.map(produto => {
                         const quantidade = quantidadeProduto(produto.id);
