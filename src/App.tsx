@@ -7,6 +7,7 @@ import { Footer } from './components/footer';
 import './index.css';
 import { useState } from 'react';
 import { HistoricoPedidos } from './components/historicoPedidos';
+import { Favoritos } from './components/favoritos';
 
 function App() {
   const [carrinhoAberto, setCarrinhoAberto] = useState(false);
@@ -21,6 +22,7 @@ function App() {
       <main className="flex-1">
         <Routes>
           <Route path="/" element={<Conjuntos filtro={busca} />} />
+          <Route path="/favoritos" element={<Favoritos />} />
           <Route path="/historicoPedidos" element={<HistoricoPedidos />} />
           <Route path="/produto/:id" element={<Detalhes />} />
         </Routes>

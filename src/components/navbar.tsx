@@ -1,5 +1,5 @@
 import './navbar.css';
-import { ShoppingCart, Menu } from 'lucide-react';
+import { ShoppingCart, Menu, Heart } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { useCarrinho } from '../context/carrinho';
 import Logo from '/images/RocketShine.png';
@@ -45,6 +45,10 @@ export function Navbar({ onCarrinhoClick, onBuscar }: NavbarProps) {
                 <div className="navbar-right">
                     <Link to="/historicoPedidos" className="navbar-link hidden md:inline">
                         Meus pedidos
+                    </Link>
+
+                    <Link to="/favoritos" className="navbar-button" aria-label="Favoritos">
+                        <Heart size={25} />
                     </Link>
 
                     <button className="navbar-button" onClick={onCarrinhoClick} aria-label="Carrinho">

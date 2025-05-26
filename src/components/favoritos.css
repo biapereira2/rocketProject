@@ -1,0 +1,9 @@
+.sem-favoritos {
+    @apply mt-16 text-center text-lg font-medium flex flex-col items-center gap-2;
+    color: #3a2e2e;
+}
+
+.sem-favoritos-coracao {
+    @apply text-4xl;
+    color: #3a2e2e;
+}
