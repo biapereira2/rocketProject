@@ -11,17 +11,16 @@ import { Favoritos } from './components/favoritos';
 
 function App() {
   const [carrinhoAberto, setCarrinhoAberto] = useState(false);
-  const [busca, setBusca] = useState('');
 
   return (
     <div className="min-h-screen flex flex-col">
-      <Navbar onCarrinhoClick={() => setCarrinhoAberto(true)} onBuscar={setBusca} />
+      <Navbar onCarrinhoClick={() => setCarrinhoAberto(true)}/>
 
       <MeuCarrinho aberto={carrinhoAberto} onClose={() => setCarrinhoAberto(false)} />
 
       <main className="flex-1">
         <Routes>
-          <Route path="/" element={<Conjuntos filtro={busca} />} />
+          <Route path="/" element={<Conjuntos/>} />
           <Route path="/favoritos" element={<Favoritos />} />
           <Route path="/historicoPedidos" element={<HistoricoPedidos />} />
           <Route path="/produto/:id" element={<Detalhes />} />

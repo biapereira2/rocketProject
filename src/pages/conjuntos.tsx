@@ -3,7 +3,6 @@ import './conjuntos.css';
 import { useNavigate, useLocation } from 'react-router-dom';
 import { useCarrinho } from "../context/carrinho.tsx";
 
-// (No props needed for Conjuntos)
 export function Conjuntos() {
     const { adicionarProduto, removerProduto, quantidadeProduto } = useCarrinho();
     const navigate = useNavigate();
