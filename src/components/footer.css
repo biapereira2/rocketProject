@@ -4,11 +4,15 @@
 }
 
 .footer-container {
-    @apply max-w-6xl mx-auto px-4 grid grid-cols-1 md:grid-cols-3 gap-8;
+    @apply max-w-6xl mx-auto px-4 grid grid-cols-1 md:grid-cols-2 gap-8 items-start;
 }
 
 .footer-section {
     @apply text-sm text-gray-300;
+}
+
+.footer-section:first-child {
+    @apply max-w-lg;
 }
 
 .footer-title {
@@ -37,4 +41,12 @@
 
 .footer-copy {
     @apply text-center text-sm text-gray-500 mt-8;
+}
+
+.footer-section:last-child {
+    @apply flex justify-end items-center;
+}
+
+.footer-section:last-child img {
+    @apply h-24 max-w-xs object-contain;
 }

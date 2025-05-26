@@ -48,29 +48,32 @@ type MeuCarrinhoProps = {
             </div>
             )}
             {carrinho.length === 0 ? (
-            <p>O carrinho está vazio.</p>
-            ) : (
-            carrinho.map(produto => (
-                <div key={produto.id} className="item-carrinho">
-                    <div className="topo-item flex gap-4">
-                        <img src={produto.image} alt={produto.name} className="img-produto" />
-                        <div className="item-info">
-                            <h3>{produto.name}</h3>
-                            <p>R$ {produto.price.toFixed(2)}</p>
-                        </div>
-                    </div>
-                    <div className="quantidade-subtotal">
-                        <div className="quantidade-controle">
-                            <button onClick={() => removerProduto(produto.id)}>-</button>
-                            <span>{produto.quantidade}</span>
-                            <button onClick={() => adicionarProduto(produto)}>+</button>
-                        </div>
-                        <span className="subtotal">
-                            Subtotal: R$ {(produto.price * produto.quantidade).toFixed(2)}
-                        </span>
-                    </div>
+                <div className="carrinho-vazio">
+                    <p>O carrinho está vazio.</p>
+                    <p>Adicione produtos para começar!</p>
                 </div>
-            ))
+            ) : (
+                carrinho.map(produto => (
+                    <div key={produto.id} className="item-carrinho">
+                        <div className="topo-item flex gap-4">
+                            <img src={produto.image} alt={produto.name} className="img-produto" />
+                            <div className="item-info">
+                                <h3>{produto.name}</h3>
+                                <p>R$ {produto.price.toFixed(2)}</p>
+                            </div>
+                        </div>
+                        <div className="quantidade-subtotal">
+                            <div className="quantidade-controle">
+                                <button onClick={() => removerProduto(produto.id)}>-</button>
+                                <span>{produto.quantidade}</span>
+                                <button onClick={() => adicionarProduto(produto)}>+</button>
+                            </div>
+                            <span className="subtotal">
+                                Subtotal: R$ {(produto.price * produto.quantidade).toFixed(2)}
+                            </span>
+                        </div>
+                    </div>
+                ))
             )}
 
             {carrinho.length > 0 && (

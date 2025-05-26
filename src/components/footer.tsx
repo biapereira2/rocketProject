@@ -1,39 +1,26 @@
 import './footer.css';
+import logo from '/images/RocketShine.png'; // ajuste o caminho da sua logo
 
 export function Footer() {
     return (
-    <footer className="footer">
-        <div className="footer-container">
-            <div className="footer-section">
-                <h3 className="footer-title">Sobre</h3>
-                <p className="footer-text">
-                    Loja fictícia criada para estudos com React, TypeScript e TailwindCSS.
-                </p>
-            </div>
+        <footer className="footer">
+            <div className="footer-container flex justify-between items-start">
+                <div className="footer-section max-w-lg">
+                    <h3 className="footer-title">Sobre nós</h3>
+                    <p className="footer-text">
+                        Há 20 anos no mercado, a Rocket Shine é referência em joias douradas versáteis, cuidadosamente selecionadas para combinar com seu estilo único. 
+                        Nossas peças são pensadas para acompanhar você em todos os momentos, trazendo elegância e sofisticação de forma prática e acessível.
+                    </p>
+                </div>
 
-            <div className="footer-section">
-                <h3 className="footer-title">Links</h3>
-                <ul className="footer-links">
-                    <li><a href="#">Início</a></li>
-                    <li><a href="#">Catálogo</a></li>
-                    <li><a href="#">Carrinho</a></li>
-                    <li><a href="#">Contato</a></li>
-                </ul>
-            </div>
-
-            <div className="footer-section">
-                <h3 className="footer-title">Siga a gente</h3>
-                <div className="footer-social">
-                    <a href="#">Instagram</a>
-                    <a href="#">Twitter</a>
-                    <a href="#">LinkedIn</a>
+                <div className="footer-section flex items-center">
+                    <img src={logo} alt="Logo" className="h-20 object-contain" />
                 </div>
             </div>
-        </div>
 
-        <div className="footer-copy">
-            © {new Date().getFullYear()} Meu E-commerce. Todos os direitos reservados.
-        </div>
-    </footer>
+            <div className="footer-copy">
+                © {new Date().getFullYear()} RocketShine. Todos os direitos reservados.
+            </div>
+        </footer>
     );
 }

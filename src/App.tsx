@@ -1,5 +1,4 @@
 import { Routes, Route } from 'react-router-dom';
-import { Home } from './pages/home';
 import { Conjuntos } from './pages/conjuntos';
 import { Navbar } from './components/navbar';
 import { Detalhes } from './components/detalhes';
@@ -12,20 +11,24 @@ import { HistoricoPedidos } from './components/historicoPedidos';
 function App() {
   const [carrinhoAberto, setCarrinhoAberto] = useState(false);
 
+  const [busca, setBusca] = useState('');7
+  
   return (
-    <>
-      <Navbar onCarrinhoClick={() => setCarrinhoAberto(true)} />
+    <div className="min-h-screen flex flex-col">
+      <Navbar onCarrinhoClick={() => setCarrinhoAberto(true)} onBuscar={setBusca} />
+
       <MeuCarrinho aberto={carrinhoAberto} onClose={() => setCarrinhoAberto(false)} />
-      <div>
+
+      <main className="flex-1">
         <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/conjuntos" element={<Conjuntos />} />
+          <Route path="/" element={<Conjuntos filtro={busca} />} />
           <Route path="/historicoPedidos" element={<HistoricoPedidos />} />
           <Route path="/produto/:id" element={<Detalhes />} />
         </Routes>
-      </div>
+      </main>
+
       <Footer />
-    </>
+    </div>
   );
 }
 

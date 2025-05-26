@@ -1,26 +1,45 @@
 .navbar {
     background-color: #a7987e;
-    @apply text-white flex items-center px-6 py-6;
+    @apply h-20 text-white flex items-center justify-between px-6;
+}
+
+.logo-img {
+    @apply h-full max-w-[150px];
+    object-fit: contain;
 }
 
 .navbar-logo {
-    @apply font-bold text-xl;
+    @apply flex items-center;
 }
 
-.navbar-links {
-    @apply flex space-x-6 flex-1 justify-center;
+/* Centraliza a barra de busca com largura maior */
+.search-bar {
+    @apply px-4 py-2 rounded-full bg-white text-gray-800 w-[28rem] transition-all duration-200 shadow-md border border-gray-300 focus:outline-none focus:ring-2 focus:ring-[#a7987e];
+}
+
+/* Esconde busca em telas menores */
+@media (max-width: 768px) {
+    .search-bar {
+        display: none;
+    }
 }
 
 .navbar-link {
     @apply p-2 text-white transition transform hover:-translate-y-1 hover:text-gray-200;
 }
 
-.navbar-icons {
-    @apply flex items-center space-x-6;
+/* NOVO - container central da navbar com a busca */
+.navbar-center {
+    @apply hidden md:flex flex-1 justify-center;
 }
 
-.navbar-icon-link {
-    @apply text-white hover:text-gray-200 cursor-pointer flex items-center;
+/* NOVO - container com "Meus pedidos" e ícones à direita */
+.navbar-right {
+    @apply hidden md:flex items-center gap-6;
+}
+
+.navbar-icons {
+    @apply flex items-center space-x-4;
 }
 
 .navbar-button {
@@ -28,14 +47,22 @@
     @apply p-2 text-white transition transform hover:-translate-y-1 hover:text-gray-200;
 }
 
-.quantity-items {
-    @apply relative;
-}
-
-.icon {
-    @apply w-6 h-6 text-white;
-}
-
 .cart-badge {
     @apply absolute -top-2 -right-2 bg-red-600 text-white text-xs w-5 h-5 rounded-full flex items-center justify-center;
+}
+
+.mobile-menu {
+    @apply md:hidden flex flex-col items-start bg-[#a7987e] w-full px-6 py-4 space-y-2 text-white;
+}
+
+.search-bar-mobile {
+    font-size: 1rem;
+}
+
+@media (max-width: 768px) {
+    .navbar-right {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+    }
 }
