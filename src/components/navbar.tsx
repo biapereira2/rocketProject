@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 import { useCarrinho } from '../context/carrinho';
 import Logo from '/images/RocketShine.png';
 import { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 
 type NavbarProps = {
     onCarrinhoClick: () => void;
@@ -15,43 +16,37 @@ export function Navbar({ onCarrinhoClick, onBuscar }: NavbarProps) {
     const totalItens = carrinho.reduce((total, item) => total + item.quantidade, 0);
     const [menuAberto, setMenuAberto] = useState(false);
     const [pesquisa, setPesquisa] = useState('');
+    const navigate = useNavigate();
 
     function handlePesquisaChange(e: React.ChangeEvent<HTMLInputElement>) {
         const valor = e.target.value;
         setPesquisa(valor);
         onBuscar(valor);
     }
+    
+    function handleSearchSubmit(e: React.FormEvent<HTMLFormElement>) {
+        e.preventDefault();
+        navigate(`/?busca=${encodeURIComponent(pesquisa)}`);
+    }
 
     return (
         <>
             <nav className="navbar">
-                {/* Esquerda - logo */}
                 <div className="navbar-logo">
                     <Link to="/">
                         <img src={Logo} alt="Logo" className="logo-img" />
                     </Link>
                 </div>
 
-                {/* Centro - barra de busca (aparece só em desktop) */}
-                <div className="navbar-center">
-                    <input
-                        type="text"
-                        placeholder="Buscar..."
-                        value={pesquisa}
-                        onChange={handlePesquisaChange}
-                        className="search-bar hidden md:block"
-                        aria-label="Barra de pesquisa"
-                    />
-                </div>
+                <form onSubmit={handleSearchSubmit} className="navbar-center">
+                    <input type="text" placeholder="Buscar conjuntos" value={pesquisa} onChange={handlePesquisaChange} className="search-bar hidden md:block" aria-label="Barra de pesquisa"/>
+                </form>
 
-                {/* Direita - Meus pedidos (desktop), carrinho e menu mobile */}
                 <div className="navbar-right">
-                    {/* Meus pedidos só aparece em desktop */}
                     <Link to="/historicoPedidos" className="navbar-link hidden md:inline">
                         Meus pedidos
                     </Link>
 
-                    {/* Botão carrinho sempre visível */}
                     <button className="navbar-button" onClick={onCarrinhoClick} aria-label="Carrinho">
                         <ShoppingCart size={25} />
                         {totalItens > 0 && (
@@ -59,7 +54,6 @@ export function Navbar({ onCarrinhoClick, onBuscar }: NavbarProps) {
                         )}
                     </button>
 
-                    {/* Botão menu hamburguer só aparece no mobile */}
                     <button
                         className="md:hidden text-white"
                         onClick={() => setMenuAberto(!menuAberto)}
@@ -70,7 +64,6 @@ export function Navbar({ onCarrinhoClick, onBuscar }: NavbarProps) {
                 </div>
             </nav>
 
-            {/* Menu mobile: inclui barra de busca e link "Meus pedidos" */}
             {menuAberto && (
                 <div className="mobile-menu md:hidden w-full bg-[#a7987e] px-6 py-4 space-y-4 text-white">
                     <input

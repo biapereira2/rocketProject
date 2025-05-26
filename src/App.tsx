@@ -10,9 +10,8 @@ import { HistoricoPedidos } from './components/historicoPedidos';
 
 function App() {
   const [carrinhoAberto, setCarrinhoAberto] = useState(false);
+  const [busca, setBusca] = useState('');
 
-  const [busca, setBusca] = useState('');7
-  
   return (
     <div className="min-h-screen flex flex-col">
       <Navbar onCarrinhoClick={() => setCarrinhoAberto(true)} onBuscar={setBusca} />
@@ -31,5 +30,6 @@ function App() {
     </div>
   );
 }
+
 
 export default App;

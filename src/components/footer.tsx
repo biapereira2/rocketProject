@@ -1,5 +1,5 @@
 import './footer.css';
-import logo from '/images/RocketShine.png'; // ajuste o caminho da sua logo
+import logo from '/images/RocketShine.png';
 
 export function Footer() {
     return (
